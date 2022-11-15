@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ settings.metaTitle }}</title>
+
+    {{> head }}
+
+    <!--- THEMES: in settings.json change 'glitch' to 'gallery', 'menu', or any other theme in the layout/themes folder --->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/styles/themes/{{settings.theme}}.css"
+    />
+    <style>
+      a {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="content">{{> avatar }} {{> name }}</div>
+        <div class="content">{{> links }}</div>
+      </div>
+      {{> glitch-footer }}
+    </main>
+  </body>
+</html>
